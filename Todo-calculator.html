@@ -19,16 +19,258 @@
       }
       .container {
         display: grid;
-        grid-template-columns: repeat(4, 200px);
-        grid-template-rows: repeat(4, 200px);
-        height: 400px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 60px);
         width: 350px;
         border: solid 1px black;
         background-color: white;
+        grid-gap: 10px;
+        padding: 20px;
+        grid-template-areas:
+          "displays displays displays displays"
+          "Operators1 Operators2 Operators3 Operators4"
+          "number7 number8 number9 number4"
+          "number5 number6 number1 number2"
+          "number3 number0 dot clear"
+          "equal equal . .";
+      }
+      .container .displays {
+        grid-area: displays;
+        display: flex;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        font-size: 50px;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 20px;
+      }
+      .container .Operators1 {
+        display: flex;
+        grid-area: Operators1;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(255, 208, 0);
+      }
+      .container .Operators2 {
+        display: flex;
+        grid-area: Operators2;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(255, 208, 0);
+      }
+      .container .Operators3 {
+        display: flex;
+        grid-area: Operators3;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(255, 208, 0);
+      }
+      .container .Operators4 {
+        display: flex;
+        grid-area: Operators4;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(255, 208, 0);
+      }
+      .container .number7 {
+        display: flex;
+        grid-area: number7;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number8 {
+        display: flex;
+        grid-area: number8;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number9 {
+        display: flex;
+        grid-area: number9;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number4 {
+        display: flex;
+        grid-area: number4;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number5 {
+        display: flex;
+        grid-area: number5;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number6 {
+        display: flex;
+        grid-area: number6;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number1 {
+        display: flex;
+        grid-area: number1;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number2 {
+        display: flex;
+        grid-area: number2;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number3 {
+        display: flex;
+        grid-area: number3;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .number0 {
+        display: flex;
+        grid-area: number0;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .dot {
+        display: flex;
+        grid-area: dot;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 195, 255);
+      }
+      .container .clear {
+        display: flex;
+        grid-area: clear;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(255, 0, 0);
+      }
+      .container .equal {
+        display: flex;
+        grid-area: equal;
+        background-color: rgb(245, 239, 239);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+        font-size: 50px;
+        padding: 1px;
+        background-color: rgb(0, 255, 115);
       }
     </style>
   </head>
   <body>
-    <div class="container">hello</div>
+    <div class="container">
+      <div class="displays">8.3 + 1.7</div>
+      <div class="Operators1">+</div>
+      <div class="Operators2">-</div>
+      <div class="Operators3">x</div>
+      <div class="Operators4">/</div>
+      <div class="number7">7</div>
+      <div class="number8">8</div>
+      <div class="number9">9</div>
+      <div class="number4">4</div>
+      <div class="number5">5</div>
+      <div class="number6">6</div>
+      <div class="number1">1</div>
+      <div class="number2">2</div>
+      <div class="number3">3</div>
+      <div class="number0">0</div>
+      <div class="dot">.</div>
+      <div class="clear">C</div>
+      <div class="equal">=</div>
+    </div>
   </body>
 </html>
