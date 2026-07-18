@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        display: grid;
+        grid-gap: 30px;
+        font-size: 50px;
+        color: white;
+        padding: 50px;
+        height: 1000px;
+        width: 1000px;
+        background-color: aquamarine;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 150px);
+        grid-template-areas:
+          "header header header header"
+          "aside article article article"
+          "aside article article article"
+          "aside article article article"
+          "footer footer footer footer";
+      }
+
+      header,
+      aside,
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header {
+        grid-area: header;
+        background-color: blueviolet;
+      }
+      aside {
+        grid-area: aside;
+        background-color: rgb(63, 33, 101);
+      }
+      article {
+        grid-area: article;
+        background-color: rgb(39, 24, 56);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr 1fr;
+        grid-gap: 20px;
+        padding: 20px;
+      }
+      footer {
+        grid-area: footer;
+        background-color: blueviolet;
+      }
+      .article-title {
+        grid-column: span 3;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+      .image {
+        background-color: darkmagenta;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <aside>Aside</aside>
+      <article>
+        <div class="article-title">Article</div>
+
+        <div class="image">Image</div>
+        <div class="image">Image</div>
+        <div class="image">Image</div>
+      </article>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
